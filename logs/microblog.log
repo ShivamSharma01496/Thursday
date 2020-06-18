@@ -1,0 +1,126 @@
+2020-06-18 15:04:21,014 ERROR: Exception on /admin [POST] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 75, in admin
+    return render_template('admin_home.html', title= 'Admin Home')
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\admin_home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 100, in top-level template code
+    {% block content %}{% endblock %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\admin_home.html", line 10, in block "content"
+    <a style="font-size:23px" href = "{{ url_for('ahotspots') }}">Click here for adding a new hotspot</a> <br><br>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'ahotspots'. Did you mean 'main.ahotspots' instead?
+2020-06-18 15:05:24,149 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 15:05:27,845 ERROR: Exception on /ahotspots [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 100, in ahotspots
+    return render_template('ahotspots.html',  title='Add a hotspot', form=form)
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\ahotspots.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 100, in top-level template code
+    {% block content %}{% endblock %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\ahotspots.html", line 28, in block "content"
+    <a href="{{ url_for('update_db') }}" class="button2">Update Database</a></p>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'update_db'. Did you mean 'main.update_db' instead?
+2020-06-18 15:08:29,644 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 15:15:52,682 ERROR: Exception on /update_db [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 166, in update_db
+    numbering()
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 245, in numbering
+    dist = radius
+NameError: name 'radius' is not defined
+2020-06-18 15:31:59,158 ERROR: Exception on /update_db [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 166, in update_db
+    @bp.route('/update_db')
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 245, in numbering
+    #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+NameError: name 'radius' is not defined

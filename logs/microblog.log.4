@@ -1,0 +1,136 @@
+2020-06-18 14:42:50,727 ERROR: Exception on /auth/login [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\auth\routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\auth\login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Python34\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Python34\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "C:\Python34\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "C:\Python34\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
+    {% block navbar %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 22, in block "navbar"
+    <li><a href="{{ url_for('main.explore') }}">{{ _('Explore') }}</a></li>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.explore'. Did you mean 'main.index' instead?
+2020-06-18 14:45:09,145 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 14:45:14,450 ERROR: Exception on /auth/login [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\auth\routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\auth\login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 74, in top-level template code
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a style="font-size:30px" "color:#8b0000" href="{{ url_for('index_9') }}"style="color:red">Home</a>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index_9'. Did you mean 'main.index_9' instead?
+2020-06-18 14:47:48,179 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 14:47:52,359 ERROR: Exception on / [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 53, in index_9
+    return render_template('index_9.html', title='Home')
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\index_9.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 74, in top-level template code
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a style="font-size:30px" "color:#8b0000" href="{{ url_for('index_9') }}"style="color:red">Home</a>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index_9'. Did you mean 'main.index_9' instead?
+2020-06-18 14:48:47,795 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]

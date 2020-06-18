@@ -1,0 +1,139 @@
+2020-06-18 14:51:47,808 ERROR: Exception on / [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 53, in index_9
+    return render_template('index_9.html', title='Home')
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\index_9.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 74, in top-level template code
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a style="font-size:30px" "color:#8b0000" href="{{ url_for('index_9') }}"style="color:red">Home</a>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index_9'. Did you mean 'main.index_9' instead?
+2020-06-18 14:52:39,160 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 14:52:42,444 ERROR: Exception on /visitor_home [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 72, in visitor_home
+    return render_template('visitor_home.html',  title='Visitor Home')
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Python34\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Python34\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Python34\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\visitor_home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\base.html", line 100, in top-level template code
+    {% block content %}{% endblock %}
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\templates\visitor_home.html", line 11, in block "content"
+    <a style="font-size:25px" href="{{ url_for('trains_list') }}">Click here to see the list of running trains</a>
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'trains_list'. Did you mean 'main.trains_list' instead?
+2020-06-18 14:53:32,698 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 14:53:36,914 ERROR: Exception on /trains_list [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 169, in trains_list
+    f = open('Re_reversed_new_routes_lengths.txt','r')
+FileNotFoundError: [Errno 2] No such file or directory: 'Re_reversed_new_routes_lengths.txt'
+2020-06-18 14:53:43,970 ERROR: Exception on /admin [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 59, in admin
+    form = LoginForm()
+NameError: name 'LoginForm' is not defined
+2020-06-18 14:56:19,713 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 14:56:24,934 ERROR: Exception on /admin [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 59, in admin
+    form = LoginForm()
+NameError: name 'LoginForm' is not defined
+2020-06-18 15:04:11,051 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
